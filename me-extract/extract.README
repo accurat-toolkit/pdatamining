@@ -1,0 +1,12 @@
+In order to run extract.exe you MUST:
+1) copy the relevant model from 'models/' (say this is called 'model_xx-yy') into the 'Script/' directory
+2) rename the file 'Script/model_xx-yy' to 'Script/model'
+3) execute 'extract.exe' this way:
+
+extract.exe --source xx --target yy --param LEX=../emacc-pexacc-lexacc/dict/yy_xx \
+	TRAIN=0 TRAIN_SIZE=0 TEST_SIZE=0 --input path/to/cc/document/alignment/list --output out.txt
+
+PLEASE PAY ATTENTION TO:
+1) if the language pair is xx -> yy, be sure to load the yy_xx dictionary!
+2) if you want to run extract.exe for another language pair, please overwrite 'Script/model' with the relevant model from 'models/'
+3) the document alignment list is the same as the one used by LEXACC/PEXACC. Format: doc_A <TAB> doc_B <TAB> score <NEWLINE> ...

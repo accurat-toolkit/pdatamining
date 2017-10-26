@@ -1,0 +1,54 @@
+This directory contains all the resources and the tools that compose the "Paralle Data Mining Workflow" described
+in the ACCURAT deliverable D2.6. Version 2.
+The present bundle is compiled for ONLY FOR Windows systems (!) and contains the following tools:
+
+Requirements:
+- 'perl' and 'java' must be in the %PATH%.
+- IT IS STRONGLY RECOMMENDED that for EMACC and PEXACC, the user edits the cluster.info  (see D2.6 for that) file and run on multiple CPU cores since
+both algorithms are CPU intesive.
+- be sure to uset the environment variable USER to your user in cmd.exe! That is, 'echo %USER%' MUST NOT BE VOID! GIZA++ breaks if this does not happen.
+
+1. CTS ComMetric "document aligner" application (ComMetric). Files belonging to this application are (directory 'commetric\'):
+	- ComMetric.jar
+	- en-stopwords.txt
+
+2. CTS DicMetric "document aligner" application (DicMetric). Files belonging to this application are (directory 'dicmetric\'):
+	- DicMetric.jar
+	- 'dict\' directory
+	- 'stopwords\' directory
+	
+3. DFKI "parallel sentence" extractor application. Files belonging to this application are (directory 'me-extract\'):
+	- extract.exe (compiled for Windows)
+	- the 'Script\' directory
+
+4. RACAI "parallel phrase extractor" application (LEXACC). Files belonging to this application are (directory 'emacc-pexacc-lexacc\'):
+	- lexacc32.exe
+	- lexacc32.README
+	- 'dict\' and 'res\' directories
+	- Lucene.Net.dll Lucene library
+
+5. RACAI "parallel phrase extractor" application (PEXACC). Files belonging to this application are (directory 'emacc-pexacc-lexacc\'):
+	- initcluster.pl, pdataworker.pl, pexacc2.pl, pexacc2conf.pm, strsim.pm, pdataextract-gizapp.gizacfg
+	- cluster.info
+	- 'dict\' and 'res\' directories
+	- 'giza++-1.0.5' (compiled GIZA++ executables for Windows)
+
+6. RACAI "document aligner" application (EMACC). Files belonging to this application are (directory 'emacc-pexacc-lexacc\'):
+	- emacc2.pl, precompworker.pl, emaccconf.pm, hddmatrix.pm
+	- cluster.info
+	- 'dict\' and 'res\' directories
+
+7. USFD "document aligner" application (Feature-based Document pair classifier). Files belonging to this application are:
+	- all files in the 'featclass\' directory.
+	- featclass.bat
+
+Files in the root of the arhive that MUST NOT be deleted:
+	- Lucene.Net.dll Lucene library
+	- en-stopwords.txt
+	- ParallelDataMining.*
+	- all directories
+
+In order to run the workflow, please edit ONLY the 'ParallelDataMining.prop' for configuration and run 'ParallelDataMining.pl'.
+Get an usage of 'ParallelDataMining.pl' by executing it without command line switches.
+
+IMPORTANT: Do not delete ANY files other than those produced by 'ParallelDataMining.pl' !!

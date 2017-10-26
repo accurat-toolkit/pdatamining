@@ -1,0 +1,3 @@
+GIZA++ 1.0.5 compilation issues:
+- this workflow uses GIZA++ without the co-occurence files so make sure you compile GIZA++ WITHOUT the -DBINARY_SEARCH_FOR_TTABLE
+- if compiled with MinGW in Windows and ran under 'cmd.exe', make sure you set the USER environment variable to the user that is currently logged on

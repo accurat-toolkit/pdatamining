@@ -1,0 +1,9 @@
+Make sure that the directory 'Script' is created. The program will write a 'model' file there.
+It's up to you to rename it to reflect the language pairs.
+
+Sample command for training (run extract.exe from this directory):
+
+../extract.exe --source de --target en \
+	--param LEX=../../emacc-pexacc/dict/en_de \
+	TRAIN=1 TRAIN_SIZE=10000 TEST_SIZE=1000 \
+	--input en-de/ --output model_de-en

@@ -1,0 +1,6 @@
+E:\temp\accurat\Toolkit\workflow\pdatamining\test\RO\Abraham_Stoker_RO.txt
+E:\temp\accurat\Toolkit\workflow\pdatamining\test\RO\Acheron_RO.txt
+E:\temp\accurat\Toolkit\workflow\pdatamining\test\RO\Caucasian_language_RO.txt
+E:\temp\accurat\Toolkit\workflow\pdatamining\test\RO\Central_Powers_RO.txt
+E:\temp\accurat\Toolkit\workflow\pdatamining\test\RO\Emily_Bronte_RO.txt
+E:\temp\accurat\Toolkit\workflow\pdatamining\test\RO\Namib_Desert_RO.txt

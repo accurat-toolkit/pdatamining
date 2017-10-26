@@ -1,0 +1,1 @@
+Copy 'Lucene.Net.dll', 'dict/' and 'res/' directories one level up (for LEXACC operation).

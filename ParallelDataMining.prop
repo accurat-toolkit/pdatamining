@@ -1,0 +1,76 @@
+######################################
+# The property file supports comments only at the beginning of lines (do not add comments after statements).
+######################################
+
+### Document Alignment Applications Section
+
+#Ver 2 OK
+#ComMetric
+ComMetric_WN = wordnet-2.1
+ComMetric_Threshold = 0.4
+#'dfki', 'google' or 'bing'
+#'dfki' only now. 'google' and 'bing' do not work anymore (due to changes in their service policy).
+#Be aware that the DFKI API supports only a limited amount of translation pairs. For a full list, please refer to the documentation.
+ComMetric_TranslationAPI = dfki
+ComMetric_TempDir = commetric\tmp
+
+#Ver 2 OK
+#DictMetric
+DictMetric_WN = wordnet-2.1
+DictMetric_Threshold = 0.3
+#option: 0 or 1 (translate non-English languages to English)
+DictMetric_Option = 0
+DictMetric_TempDir = dictmetric\tmp
+
+#Ver 2 OK
+#EMACC
+EMACC_EMLOOPS = 3
+#'D1' or 'D2'
+EMACC_INIDISTRIB = D2
+EMACC_TEQPUPDATETHR = 0.4
+EMACC_LEXALSCORE = 0.4
+#Y2 Review demo, default 3
+EMACC_MAXTARGETALIGNMENTS = 1
+#'giza' or 'comp'
+EMACC_PROBTYPE = giza
+#Y2 Review demo, default generate
+EMACC_CLUSTERFILE = cluster.info
+
+#Feature-based document classifier
+FeatClass_Threshold = 2
+FeatClass_Models = featclass\Model
+
+### End Document Alignment Applications Section
+
+### Paralle Phrase/Sentence Extraction Applications Section
+
+#Ver 2 OK
+#PEXACC
+PEXACC_SENTRATIO = 1.5
+#'chunk' for phrases or 'sent' for sentences
+PEXACC_SPLITMODE = sent
+#How probable is that a pair of phrases is parallel. A good value here is 0.5.
+#Pairs with scores over this value will be output.
+PEXACC_OUTPUTTHR = 0.3
+#How many relevance loops to attempt (in order to detect new correct pairs by training
+#additional GIZA++ dictionaries.
+PEXACC_GIZAPPITERATIONS = 1
+#Y2 Review demo, default generate
+PEXACC_CLUSTERFILE = cluster.info
+
+#Ver 2 OK
+#ME-Extract
+Extract_ModelsDir = me-extract\models
+
+#Ver 2.1 OK
+#LEXACC
+#'true' if the input documents are already sentence split and tokenized
+LEXACC_Segmentation = false
+#N:N sentence alignments
+LEXACC_AlignmentProductivity = 1
+#Output threshold (0..1)
+LEXACC_Threshold = 0.2
+#Execute post-extraction filtering
+LEXACC_Filter = true
+
+### End Paralle Phrase/Sentence Extraction Applications Section
